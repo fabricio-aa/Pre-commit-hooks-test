@@ -1,21 +1,24 @@
-# Pre-commit-hooks-test
+# Pre-commit Hooks Test
 
-### Instructions
+This repo provides a basic pre-commit script to ensure files end with a newline.
 
-Install pre-commit:
-
+Pre requisites:
 pip install pre-commit
 pre-commit install
 
 
+You can use it in two ways:
 
-Create a file pre-commit tools/pre-commit-check.sh 
-Create pre-commit file
-Copy the contet or the files from this repo
+Versioned per repo: keep the script in a .git/hooks/pre-commit.
+Manual copy: copy the files directly into any repo you want to enforce the rule.
 
-Copy pre-commit to .git/hooks/pre-commit
-Copy 
+Instructions
 
-Chmod +x tools/pre-commit-check.sh 
-Chmod +x .git/hooks/pre-commit
+Create a script: tools/pre-commit-check.sh (see example in this repo).
+Create a file: .git/hooks/pre-commit that calls the script.
 
+Make both files executable:
+chmod +x tools/pre-commit-check.sh
+chmod +x .git/hooks/pre-commit
+
+The check will run automatically on every commit.
